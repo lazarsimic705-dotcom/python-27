@@ -13,9 +13,7 @@ def init():
     navigation = show_navigation(window)
     content = show_body_frame(window)
 
-    navigation.bind("<<ListboxSelect>>", lambda event: switch_navigation_window(window))
-
-    show_users_window(content)
+    navigation.bind("<<ListboxSelect>>", lambda event: switch_navigation_window(event, content))
 
     window.mainloop()
 
